@@ -1,85 +1,217 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-style: italic;
 }
 #head{
-    height: 300px;
+    min-height: 300px;
     background-image: url(img/photo-1582510003544-4d00b7f74220.avif);
     background-size: cover;
     background-position: center;
     text-align: center;
-    
+    padding: 40px 20px;
 }
 .title{
-   padding: 100px 0 0 0;
-  
+   padding: 60px 20px 0 20px;
+   font-size: 2.5rem;
 }
 #below-title{
-    padding: 20px 0 0 0;
-    
+    padding: 20px;
+    font-size: 1.2rem;
 }
 .highlight{
     background-color:rgba(244, 242, 105, 0.577);
     color: rgb(18, 11, 11);
+    padding: 5px 10px;
+    display: inline-block;
 }
 #mid{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  height: 400px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
 }
 #mid-title{
     text-align: center;
-    padding-top: 20px;
+    padding: 20px;
+    width: 100%;
 }
 
 .mid-content{
-    height: 300px;
-    width: 200px;
-    margin-top: 40px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin-top: 20px;
     text-align: center;
 }
 .mid-content img{
-    height:200px;
-    width: 200px;
+    height:180px;
+    width: 180px;
     border-radius: 50%;
     border: 2px solid black;
+    object-fit: cover;
 }
 .mid-content h3{
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 1.3rem;
 }
 .mid-content p{
     padding-top: 10px;
+    font-size: 0.95rem;
 }
 #middle{
     background-color: rgba(235, 101, 74, 0.218);
 }
 .card{
     display: flex;
-    text-align: center;
-    width: 450px;
-    height: 250px;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 90%;
+    max-width: 600px;
     background-color: rgb(176, 120, 228);
-    padding: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+.card img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
 }
 .content h2{
-    padding-top:30px ;
-    font-size: 30px;
+    padding-top:15px;
+    font-size: 1.8rem;
 }
 .content p{
-    padding-top:20px ;
-    font-size: 20px;
+    padding-top:15px;
+    font-size: 1rem;
 }
 .content h3{
-    padding-top:20px ;
-    font-size: 30px;
+    padding-top:15px;
+    font-size: 1.5rem;
 }
 .main-card{
-    height: 350px;
+    min-height: 350px;
     background-color: rgb(226, 249, 249);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .title{
+        padding: 40px 15px 0 15px;
+        font-size: 2rem;
+    }
+    
+    #below-title{
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    #mid{
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    .mid-content{
+        width: 100%;
+        max-width: 280px;
+        margin-top: 20px;
+    }
+    
+    .mid-content img{
+        height: 160px;
+        width: 160px;
+    }
+    
+    .card{
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    #head{
+        min-height: 250px;
+        padding: 30px 15px;
+    }
+    
+    .title{
+        padding: 30px 10px 0 10px;
+        font-size: 1.5rem;
+    }
+    
+    #below-title{
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    #mid{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    #mid-title{
+        font-size: 1.3rem;
+        padding: 15px 10px;
+    }
+    
+    .mid-content{
+        width: 100%;
+        max-width: 250px;
+        margin-top: 15px;
+    }
+    
+    .mid-content img{
+        height: 140px;
+        width: 140px;
+    }
+    
+    .mid-content h3{
+        font-size: 1.1rem;
+    }
+    
+    .mid-content p{
+        font-size: 0.85rem;
+    }
+    
+    .card{
+        width: 95%;
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .card img{
+        width: 140px;
+        height: 140px;
+    }
+    
+    .content h2{
+        font-size: 1.4rem;
+    }
+    
+    .content p{
+        font-size: 0.85rem;
+    }
+    
+    .content h3{
+        font-size: 1.2rem;
+    }
+    
+    .main-card{
+        min-height: auto;
+        padding: 15px;
+    }
 }
     
+
